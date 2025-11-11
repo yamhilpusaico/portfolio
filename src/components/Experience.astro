@@ -1,0 +1,32 @@
+
+---
+import ExperienceItem from '../components/ExperienceItem.astro';
+const EXP = [
+    {
+        tag:'Programacion',
+        title: 'C# y C++',
+        description: 'He desarrollado una base sólida en programación, enfocándome en la lógica, estructuras de datos y resolución de problemas.',
+    },
+    {
+        tag: 'Desarrollo Front End',
+        title: 'HTML, Astro, Tailwind CSS, React',
+        description: 'Actualmente me encuentro aprendiendo desarrollo web, construyendo proyectos personales para fortalecer y aplicar los conocimientos adquiridos.',
+    },
+    {
+        tag: 'Habilidades Blandas',
+        title: 'Interpersonales e Intrapersonales',
+        description:
+        'Soy una persona responsable, con facilidad para el trabajo en equipo. Me gusta aprender continuamente, crecer a nivel personal y profesional, y desarrollar mis habilidades.',
+        },
+];
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXP.map(Experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...Experience} />
+            </li>
+        ))
+    }                 
+</ol>
+

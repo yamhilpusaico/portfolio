@@ -1,11 +1,89 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from '../components/Badge.astro';
+import Socials from '../components/Socials.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import MailIcon from '../icons/Mail.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import Experience from '../components/Experience.astro';
+import Sections from '../components/Sections.astro';
+import BriefCaseIcon from '../icons/BriefCase.astro';
+import Projects from '../components/Projects.astro';
+import CodeIcon from '../icons/Code.astro';
+import AboutMe from '../components/AboutMe.astro';
+import PersonIcon from '../icons/Person.astro'
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Portafolio de Yamhil - Estudiante | Desarrollador y Programador Web"
+	description="Portafolio de Yamhil Pusaico Córdova, estudiante de Ingeniería de Sistemas en la Universidad Privada del Norte, desarrollador y programador web apasionado por crear experiencias digitales impactantes."
+>
+	<main class="px-4">
+		<Sections id="home" class="py-44 pb-24">
+		<img 
+    class="rounded-full size-20 mb-6" 
+    src="https://i.pinimg.com/736x/94/02/0d/94020d9a824580af99aaf0dd9e70f994.jpg" 
+    alt="Yamhil profile"
+    />
+			<h1 class="text-white text-xl md:text-2xl lg:text-3xl font-bold flex flex-row gap-x-4 pb-4">
+            Hola, soy Yamhil
+				<div class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</div>
+			</h1>
+			<h2 class="text-white text-sm md:text-lg lg:text-xl">
+				<span class="opacity-95">
+					Desarrollador Web | Estudiante de Ingeniería de Sistemas.
+					<p>
+						<span class="opacity-85">
+							Universidad Privada del Norte.
+						</span>
+					</p>
+				</span>
+				<span class="opacity-70">
+					<p>
+						Programador, desarrollador y entusiasta de la tecnología.
+					</p>
+					<p class="lead">
+						Nacido en Lima, Perú.
+					</p>
+					<p class="lead">
+						22 años.
+					</p>
+				</span>
+			</h2>
+			<nav class="pt-4 flex gap-2 mt-8 flex-wrap">	
+				<Socials href="https://www.linkedin.com/in/yamhil-pusaico-cordova-b50759329/">
+					<LinkedInIcon class="size-5"/>LinkedIn
+				</Socials>	
+				<Socials href="https://github.com/yamhilpusaico">
+					<GitHubIcon class="size-5"/>GitHub
+				</Socials>
+				<Socials href="https://outlook.live.com/mail/deeplink/compose?to=mailto:pusaicocordovay@hotmail.com?subject=Portafolio">
+					<MailIcon class="size-5"/>pusaicocordovay@hotmail.com
+				</Socials>
+			</nav>
+		</Sections>
+		<Sections id="experience">
+			<h2 class="text-base md:text-xl lg:text-2xl pb-12 flex items-center gap-x-2 text-white font-semibold">
+				<BriefCaseIcon class="size-7"/>
+				Experiencia en Desarrollo y Programacion
+			</h2>
+			<Experience/>		
+		</Sections>
+		<Sections id="projects">
+			<h2 class="text-base md:text-xl lg:text-2xl pb-12 flex items-center gap-x-2 text-white font-semibold">
+				<CodeIcon class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects/>		
+		</Sections>
+		<Sections id="aboutme">
+			<h2 class="text-base md:text-xl lg:text-2xl pb-12 flex items-center gap-x-2 text-white font-semibold">
+				<PersonIcon class="size-7"/>
+				Sobre Mi
+			</h2>
+			<AboutMe/>		
+		</Sections>
+	</main>
 </Layout>
